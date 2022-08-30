@@ -1,0 +1,163 @@
+.pg5 {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  background: url("../../assets/bg-extended.jpg");
+  background-size: 500%;
+  background-position: bottom left;
+  background-repeat: no-repeat;
+  padding-top: 20vw;
+  .meerkat {
+    position: absolute;
+    top: -2%;
+  }
+  img {
+    width: 30vw;
+  }
+}
+.library {
+  position: relative;
+  background: url("../../assets/bg-extended.jpg");
+  background-size: 500%;
+  background-position: bottom left;
+  background-repeat: no-repeat;
+  overflow-x: hidden;
+  .treeTrunk {
+    width: 100vw;
+  }
+  .libraryTree {
+    width: 50vw;
+  }
+  .boardLong {
+    position: absolute;
+    width: 50vw;
+    bottom: 0%;
+    left: 0;
+  }
+  .video1,
+  .video2 {
+    position: absolute;
+    width: 34vw;
+    aspect-ratio: 1/0.7;
+    object-fit: cover;
+    left: 6%;
+    box-shadow: rgba(0, 0, 0, 0.105) 0px 3px 8px;
+    border-radius: 20%;
+    border: 1px solid rgba(5, 5, 5, 0.473);
+  }
+  .video1 {
+    bottom: 9%;
+  }
+  .video2 {
+    bottom: 19%;
+  }
+
+  .containerrr {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80vw;
+    height: 65vw;
+    margin: auto;
+    .narrateButton,
+    .text {
+      position: absolute;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+    .narrateButton {
+      width: 10vw;
+      top: 40%;
+      z-index: 999;
+    }
+    .freeSample,
+    .freeSampleText {
+      position: absolute;
+      bottom: 4%;
+      z-index: 999;
+    }
+    .freeSample {
+      left: 5%;
+      width: 2rem;
+    }
+    .freeSampleText {
+      left: 15%;
+      color: white;
+    }
+    .text {
+      width: 85%;
+      text-align: center;
+      top: 60%;
+    }
+    .board {
+      position: absolute;
+      width: 80vw;
+      top: 0;
+    }
+    .illuButton {
+      position: absolute;
+      width: 40vw;
+      left: 0;
+      bottom: -2%;
+      // transform: translateY(10rem);
+      z-index: 99;
+    }
+    .illuButton2,
+    .illuButton2Text {
+      position: absolute;
+
+      z-index: 999;
+    }
+    .illuButton2 {
+      width: 40vw;
+      right: 0;
+      bottom: -2%;
+    }
+    .illuButton2Text {
+      right: 14%;
+      color: white;
+      bottom: 3%;
+    }
+    iframe {
+      width: 70%;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      aspect-ratio: 16/9;
+      position: absolute;
+    }
+    .descriptionImage {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      position: absolute;
+      width: 60vw;
+      z-index: 999;
+      left: 50%;
+      top: -50%;
+      transform: translateX(-50%);
+      img {
+        width: 40vw;
+      }
+
+      span {
+        border-radius: 1rem;
+        padding: 0.1rem 0.4rem;
+        border: 2px solid black;
+        font-size: 0.7rem;
+        // width: 100%;
+        width: fit-content;
+        text-align: center;
+        z-index: 3;
+        box-shadow: -4px -2px 0px 2px #ff74e3b2;
+        background: #ff74e3fe;
+      }
+    }
+
+    .boardTop,
+    .boardMiddle,
+    .boardBottom {
+      width: 80vw;
+    }
+  }
+}
