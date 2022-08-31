@@ -14,6 +14,11 @@ import kumaLibrary from "../../assets/kumaLibrary.png";
 import narrateButton from "../../assets/play.png";
 import illuButton from "../../assets/illu-button.png";
 
+import library from "../../assets/library2.png";
+import theatre from "../../assets/theatre.png";
+import mall from "../../assets/mall.png";
+import comingsoon from "../../assets/comingsoon.png";
+
 // import rock4 from "../../assets/rock4.png";
 // import rock2 from "../../assets/rock2.png";
 
@@ -25,48 +30,101 @@ function Homefollowing() {
         <img src={rock3} alt="" />
         <img className={Styles.meerkat} src={meerkat} alt="" />
       </div>
-      <div className={Styles.library}>
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <div className={Styles.containerrr}>
-          <div className={Styles.descriptionImage}>
-            <img src={kumaLibrary} alt="" />
-            <span style={{ marginTop: "-10%" }}>Library</span>
-          </div>
-          <img className={Styles.board} src={board} alt="" />
-          <div>
-            <img className={Styles.narrateButton} src={narrateButton} alt="" />
-            <p className={Styles.text} style={{ width: "70%" }}>
-              Get basics-to-know Knowledge cards @ ₹99
-            </p>
-          </div>
 
-          <div>
-            <img className={Styles.freeSample} src={narrateButton} alt="" />
-            <p className={Styles.freeSampleText}>Download</p>
-            <img className={Styles.illuButton} src={illuButton} alt="" />
-          </div>
+      <div className={Styles.commonBG}>
+        <div className={Styles.library}>
+          <div className={Styles.containerrr}>
+            <div className={Styles.descriptionImage}>
+              <img src={kumaLibrary} alt="" />
+              <span style={{ marginTop: "-10%" }}>Library</span>
+            </div>
+            <img className={Styles.board} src={board} alt="" />
+            <div>
+              <img
+                className={Styles.narrateButton}
+                src={narrateButton}
+                alt=""
+              />
+              <p className={Styles.text} style={{ width: "70%" }}>
+                Get basics-to-know Knowledge cards @ ₹99
+              </p>
+            </div>
 
+            <div>
+              <p
+                style={{
+                  left: "50%",
+                  top: "88%",
+                  transform: "translateX(-50%)",
+                }}
+                className={Styles.freeSampleText}
+              >
+                Download
+              </p>
+              <img
+                style={{ left: "50%", transform: "translateX(-50%)" }}
+                className={Styles.illuButton}
+                src={illuButton}
+                alt=""
+              />
+            </div>
+          </div>
+          <img className={Styles.libraryTree} src={libraryTree} alt="" />
+        </div>
+
+        <div className={Styles.treeTrunkContainer}>
+          <img className={Styles.treeTrunk} src={treeTrunk} alt="" />
+          <img className={Styles.libraryImg} src={library} alt="" />
+          <img className={Styles.theatre} src={theatre} alt="" />
           <div>
-            <img className={Styles.illuButton2} src={illuButton} alt="" />
-            <p className={Styles.illuButton2Text}>Buy now</p>
+            {/*<img className={Styles.boardLong} src={boardLong} alt="" />*/}
+            <img className={Styles.video1} src={video1} alt="" />
+            <img className={Styles.video2} src={video2} alt="" />
           </div>
         </div>
-        <br />
-        <br />
-        <br />
-        <br />
 
-        <img className={Styles.libraryTree} src={libraryTree} alt="" />
-        <img className={Styles.treeTrunk} src={treeTrunk} alt="" />
-        <div>
-          <img className={Styles.boardLong} src={boardLong} alt="" />
-          <img className={Styles.video1} src={video1} alt="" />
-          <img className={Styles.video2} src={video2} alt="" />
+        <div className={Styles.mallSection}>
+          <img className={Styles.mall} src={mall} alt="" />
+
+          <div className={Styles.containerrr}>
+            <div className={Styles.descriptionImage}>
+              <img src={kumaLibrary} alt="" />
+              <span style={{ marginTop: "-10%" }}>Mall</span>
+            </div>
+            <img className={Styles.board} src={board} alt="" />
+            <div>
+              <img
+                className={Styles.narrateButton}
+                src={narrateButton}
+                alt=""
+              />
+              <p className={Styles.text} style={{ width: "70%" }}>
+                Get basics-to-know Knowledge cards @ ₹99
+              </p>
+            </div>
+
+            <div>
+              <p
+                style={{
+                  left: "50%",
+                  top: "88%",
+                  transform: "translateX(-50%)",
+                }}
+                className={Styles.freeSampleText}
+              >
+                Download
+              </p>
+              <img
+                style={{ left: "50%", transform: "translateX(-50%)" }}
+                className={Styles.illuButton}
+                src={illuButton}
+                alt=""
+              />
+            </div>
+          </div>
+        </div>
+        <div className={Styles.comingsoon}>
+          <img src={comingsoon} alt="" />
         </div>
       </div>
     </div>

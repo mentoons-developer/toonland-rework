@@ -15,29 +15,37 @@
     width: 30vw;
   }
 }
-.library {
+.treeTrunkContainer {
   position: relative;
-  background: url("../../assets/bg-extended.jpg");
-  background-size: 500%;
-  background-position: bottom left;
-  background-repeat: no-repeat;
-  overflow-x: hidden;
+  .libraryImg,
+  .theatre {
+    position: absolute;
+    width: 30vw;
+  }
+  .libraryImg {
+    top: -10%;
+    left: 0;
+    width: 20vw;
+  }
+  .theatre {
+    bottom: 10%;
+    right: 0;
+  }
   .treeTrunk {
     width: 100vw;
   }
-  .libraryTree {
-    width: 50vw;
-  }
+
   .boardLong {
     position: absolute;
-    width: 50vw;
-    bottom: 0%;
+    width: 60vw;
+    // bottom: -15%;
+    top: 40%;
     left: 0;
   }
   .video1,
   .video2 {
     position: absolute;
-    width: 34vw;
+    width: 40vw;
     aspect-ratio: 1/0.7;
     object-fit: cover;
     left: 6%;
@@ -46,19 +54,26 @@
     border: 1px solid rgba(5, 5, 5, 0.473);
   }
   .video1 {
-    bottom: 9%;
+    top: 50%;
   }
   .video2 {
-    bottom: 19%;
+    top: 74%;
   }
-
+}
+.library,
+.mallSection {
+  position: relative;
   .containerrr {
     position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 80vw;
-    height: 65vw;
     margin: auto;
+
+    width: 70%;
+    height: 55vw;
+
+    .board {
+      width: 100%;
+    }
+
     .narrateButton,
     .text {
       position: absolute;
@@ -91,12 +106,12 @@
     }
     .board {
       position: absolute;
-      width: 80vw;
+      //   width: 80vw;
       top: 0;
     }
     .illuButton {
       position: absolute;
-      width: 40vw;
+      width: 30vw;
       left: 0;
       bottom: -2%;
       // transform: translateY(10rem);
@@ -105,11 +120,10 @@
     .illuButton2,
     .illuButton2Text {
       position: absolute;
-
       z-index: 999;
     }
     .illuButton2 {
-      width: 40vw;
+      width: 30vw;
       right: 0;
       bottom: -2%;
     }
@@ -131,13 +145,13 @@
       flex-direction: column;
       align-items: center;
       position: absolute;
-      width: 60vw;
+      width: fit-content;
       z-index: 999;
       left: 50%;
       top: -50%;
       transform: translateX(-50%);
       img {
-        width: 40vw;
+        height: 40vw;
       }
 
       span {
@@ -153,11 +167,42 @@
         background: #ff74e3fe;
       }
     }
-
-    .boardTop,
-    .boardMiddle,
-    .boardBottom {
-      width: 80vw;
-    }
+  }
+}
+.library {
+  //   height: 100vw;
+  .libraryTree {
+    width: 50vw;
+  }
+  .containerrr {
+    position: absolute;
+    top: 30%;
+    right: 0;
+  }
+}
+.commonBG {
+  background: url("../../assets/bgMall.png");
+  background-size: cover;
+  background-position: 0%;
+}
+.mallSection {
+  height: 90vh;
+  .mall {
+    position: absolute;
+    width: 90vw;
+    bottom: 0;
+  }
+  .containerrr {
+    bottom: 2%;
+    position: absolute;
+    transform: translateX(-30%);
+    left: 50%;
+  }
+}
+.comingsoon {
+  display: grid;
+  place-items: center;
+  img {
+    width: 40vw;
   }
 }
