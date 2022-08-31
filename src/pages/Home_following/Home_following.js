@@ -125,9 +125,7 @@ function Homefollowing() {
                   transform: "translateX(-50%)",
                 }}
                 className={Styles.freeSampleText}
-              >
-                Download
-              </p>
+              ></p>
               <img
                 style={{ left: "50%", transform: "translateX(-50%)" }}
                 className={Styles.illuButton}

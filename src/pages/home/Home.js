@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import Styles from "./home.module.scss";
 import bg1 from "../../assets/bg1.jpg";
 import teamImage from "../../assets/group_image.png";
@@ -17,6 +17,9 @@ import illuButton from "../../assets/illu-button.png";
 import boardTop from "../../assets/board-top.png";
 import boardMiddle from "../../assets/board-middle.png";
 import boardBottom from "../../assets/board-bottom.png";
+import volume from "../../assets/volume.png";
+import mute from "../../assets/mute.png";
+import music from "../../assets/toonlandmusic.mpeg";
 
 import charactersWalking from "../../assets/characters_walking.png";
 import bg1_new from "../../assets/bg1_new.png";
@@ -35,32 +38,77 @@ function Home() {
   //   console.log(pg2);
   //   console.log(pg2.offsetTop);
 
-  // useEffect(() => {
-  //   const pg2 = document.getElementById("pg2");
-  //   const button = document.getElementById("button");
-  //   const pg3 = document.getElementById("pg3");
+  useEffect(() => {
+    const pg2 = document.getElementById("pg2");
+    const button = document.getElementById("button");
+    const pg3 = document.getElementById("pg3");
 
-  //   button.addEventListener("click", function scrollToPg2() {
-  //     window.scrollTo({
-  //       top: pg2.offsetTop,
-  //       behavior: "smooth",
-  //     });
-  //   });
+    button.addEventListener("click", function scrollToPg2() {
+      console.log("lo");
+      window.scrollTo({
+        top: pg2.offsetTop,
+        behavior: "smooth",
+      });
+    });
 
-  //   window.addEventListener("scroll", function () {
-  //     if (window.pageYOffset === pg2.offsetTop) {
-  //       setTimeout(() => {
-  //         window.scrollTo({
-  //           top: pg3.offsetTop,
-  //           behavior: "smooth",
-  //         });
-  //       }, 1000);
-  //     }
-  //   });
-  // });
+    window.addEventListener("scroll", function () {
+      if (window.pageYOffset === pg2.offsetTop) {
+        // setTimeout(() => {
+        //   window.scrollTo({
+        //     top: pg3.offsetTop,
+        //     behavior: "smooth",
+        //   });
+        // }, 1000);
+      }
+    });
+  });
+
+  const [playing, setPlaying] = useState(true);
+
+  const audioRef = useRef(null);
+  const imageRef = useRef(null);
+
+  const handleClick = (event) => {
+    const myAudio = audioRef.current;
+    const myImage = imageRef.current;
+    console.log(myAudio);
+    console.log(myImage);
+
+    setPlaying(!playing);
+
+    if (playing) {
+      myAudio.play();
+      myImage.src = volume;
+    } else {
+      myAudio.pause();
+      myImage.src = mute;
+    }
+  };
 
   return (
     <div>
+      <div>
+        <audio ref={audioRef} loop>
+          <source src={music} type="audio/mpeg" />
+        </audio>
+        <img
+          style={{
+            position: "fixed",
+            cursor: "pointer",
+            zIndex: "99",
+            maxWidth: "3rem",
+            borderRadius: "50%",
+            background: "white",
+            padding: "0.4rem",
+            bottom: 10,
+            right: 10,
+          }}
+          ref={imageRef}
+          onClick={handleClick}
+          src={volume}
+          alt=""
+        />
+      </div>
       {/*<div className={Styles.curtain}>
         <div className={Styles.left}></div>
         <div className={Styles.right}></div>
@@ -81,7 +129,9 @@ function Home() {
         <div className={Styles.right}></div>
       </div>
       <div className={Styles.pg1_new}>
-        <button id="button">Continue to Toonland</button>
+        <button id="button" onClick={handleClick}>
+          Continue to Toonland
+        </button>
         <img className={Styles.bg1_new} src={bg1_new} alt="" />
         <img className={Styles.logo} src={logo} alt="" />
         <img className={Styles.green_left} src={green_left} alt="" />
@@ -102,7 +152,7 @@ function Home() {
       </div>
 
       <div className={Styles.commonback}>
-        <div className={Styles.audiostories_new}>
+        <div id="pg2" className={Styles.audiostories_new}>
           <div className={Styles.containerrr}>
             <div className={Styles.descriptionImage}>
               <img src={audioStories} alt="" />

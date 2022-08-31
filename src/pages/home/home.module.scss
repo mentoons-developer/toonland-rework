@@ -270,14 +270,13 @@
     animation-delay: 2.5s;
     transition: all 0.1s ease-in-out;
     border: 0;
-
     animation-name: bounceInUp;
     animation-duration: 1s;
     animation-fill-mode: both;
     &:hover {
       background: rgba(104, 6, 6, 0.86);
       transition: all 0.1s ease-in;
-      margin-top: 3.8rem;
+      margin-top: 0.5rem;
     }
   }
   .logo {
