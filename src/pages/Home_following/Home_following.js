@@ -1,6 +1,7 @@
 import React from "react";
 import Styles from "./home_following.module.scss";
 import rock from "../../assets/rock.png";
+import rock2 from "../../assets/rock2.png";
 import rock3 from "../../assets/rock3.png";
 import meerkat from "../../assets/meerkat2.png";
 import treeTrunk from "../../assets/tree_trunk.png";
@@ -27,6 +28,7 @@ function Homefollowing() {
     <div>
       <div className={Styles.pg5}>
         <img src={rock} alt="" />
+        <img className={Styles.rock2} src={rock2} alt="" />
         <img src={rock3} alt="" />
         <img className={Styles.meerkat} src={meerkat} alt="" />
       </div>
@@ -80,6 +82,18 @@ function Homefollowing() {
             {/*<img className={Styles.boardLong} src={boardLong} alt="" />*/}
             <img className={Styles.video1} src={video1} alt="" />
             <img className={Styles.video2} src={video2} alt="" />
+            <img
+              style={{ display: "none" }}
+              className={Styles.video2}
+              src={video2}
+              alt=""
+            />
+            <img
+              style={{ display: "none" }}
+              className={Styles.video2}
+              src={video2}
+              alt=""
+            />
           </div>
         </div>
 

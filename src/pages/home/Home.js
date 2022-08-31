@@ -187,23 +187,6 @@ function Home() {
           </div>
         </div>
 
-        <div className={Styles.youtube_new}>
-          <div
-            className={`${Styles.containerrr} ${Styles.containerrr_extended}`}
-          >
-            <div className={Styles.descriptionImage}>
-              <img src={illustratedStories} alt="" />
-              <span>Illustrated Movies</span>
-            </div>
-            <img className={Styles.board} src={board} alt="" />
-            <div className={Styles.sampleVideos}>
-              <img src={video1} alt="" />
-              <img src={video2} alt="" />
-            </div>
-            <img className={Styles.illuButton} src={illuButton} alt="" />
-          </div>
-        </div>
-
         <div className={Styles.comics_new}>
           <div className={Styles.containerrr}>
             <div className={Styles.descriptionImage}>
@@ -269,6 +252,23 @@ function Home() {
                 2 days workshop on how to create your own comics @ ₹699
               </p>
             </div>
+          </div>
+        </div>
+
+        <div className={Styles.youtube_new}>
+          <div
+            className={`${Styles.containerrr} ${Styles.containerrr_extended}`}
+          >
+            <div className={Styles.descriptionImage}>
+              <img src={illustratedStories} alt="" />
+              <span>Illustrated Movies</span>
+            </div>
+            <img className={Styles.board} src={board} alt="" />
+            <div className={Styles.sampleVideos}>
+              <img src={video1} alt="" />
+              <img src={video2} alt="" />
+            </div>
+            <img className={Styles.illuButton} src={illuButton} alt="" />
           </div>
         </div>
       </div>
