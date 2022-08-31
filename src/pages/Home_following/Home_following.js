@@ -92,7 +92,7 @@ function Homefollowing() {
               <span style={{ marginTop: "-10%" }}>Mall</span>
             </div>
             <img className={Styles.board} src={board} alt="" />
-            <div>
+            {/*<div>
               <img
                 className={Styles.narrateButton}
                 src={narrateButton}
@@ -101,7 +101,7 @@ function Homefollowing() {
               <p className={Styles.text} style={{ width: "70%" }}>
                 Get basics-to-know Knowledge cards @ ₹99
               </p>
-            </div>
+            </div>*/}
 
             <div>
               <p
